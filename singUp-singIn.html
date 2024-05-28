@@ -2,37 +2,40 @@
 <html lang="en">
 
 <head>
+    <!-- Set the character encoding -->
     <meta charset="UTF-8">
+    <!-- Set the viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Blog</title>
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Link to CSS files -->
     <link rel="stylesheet" href="css/sign-style.css" />
     <link rel="stylesheet" href="css/design-system.css" />
+
 </head>
 
 <body>
+    <!-- Header section -->
     <header>
         <div class="logo">
             <a href="#">
                 <span class="logo-icon">
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-9h-2v6h2v-6zm0-3h-2v2h2v-2z" />
-                   </svg>
-               </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-9h-2v6h2v-6zm0-3h-2v2h2v-2z" />
+                    </svg>
+                </span>
                 <span class="logo-text">My Insights</span>
             </a>
         </div>
     </header>
 
+    <!-- Main content -->
     <main class="main-section">
-        <section class="sign-in-wrapper">
+        <section class="sign-in-wrapper card">
             <div class="sign-in-banner">
-                <div class="banner-img">
-                    <img src="./images/sing-in-image.jpg" alt="banner image">
-                </div>
+                <figure class="banner-img">
+                    <img src="images/sing-in-image.jpg" alt="banner image">
+                    <figcaption>Join our community and explore personal stories.</figcaption>
+                </figure>
                 <div class="banner-description">
                     <h4>Welcome to My Insights</h4>
                     <p>Explore personal stories, thoughts, and experiences shared through this blog.</p>
@@ -55,10 +58,10 @@
                         <div class="remeber-me-wrapper">
                             <div class="remember-me">
                                 <input type="checkbox" id="remebre-me" name="remebre-me">
-                                <label for="remember-me">Remember me</label>
+                                <label for="remember-me"><u>Remember me</u></label>
                             </div>
                             <div class="forgot-password">
-                                <a href="">Forgot password?</a>
+                                <a href=""><em>Forgot password?</em></a>
                             </div>
                         </div>
                         <div class="form-actions">
@@ -70,6 +73,7 @@
         </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
         <p>&copy; 2023 My Insights Blog. All rights reserved.</p>
         <div class="social-links">
@@ -78,6 +82,8 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
+
+    <!-- TODO: Add script tags for any JavaScript files here -->
 </body>
 
 </html>
