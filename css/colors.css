@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Color Scheme for Design System */
 
 :root {
@@ -14,4 +15,22 @@
     --color-black: #000;
     --color-text: #333;
     --color-text-heading: #000;
+=======
+/* Color Scheme for Design System */
+
+:root {
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+    --color-info: #17a2b8;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+    --color-white: #fff;
+    --color-grey: #6c757d;
+    --color-black: #000;
+    --color-text: #333;
+    --color-text-heading: #000;
+>>>>>>> 868ad4f18d9c911927841bb256f904cdc962d1ed
 }
