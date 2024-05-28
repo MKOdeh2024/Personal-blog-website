@@ -1,0 +1,150 @@
+/* ==========================================================================
+    Hybrid Design System
+   ========================================================================== */
+
+ :root {
+    /* Colors */
+    --color-primary: #264DAA;
+    --color-secondary: #9b40ca;
+    --color-dark-grey: #2e2e31;
+    --color-light-grey: #D0D0D0;
+    --color-dark-blue: #1E256A;
+    --color-light-blue: #C0D3F1;
+    --color-white: #FFF;
+    --color-black: #606c78;
+    /* Typography */
+    --font-family-base: 'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.5;
+    --heading-font-weight: bold;
+    /* Spaces */
+    --space-xs: 5px;
+    --space-s: 10px;
+    --space-m: 15px;
+    --space-l: 25px;
+    --space-xl: 40px;
+    /* Button */
+    --btn-primary-bg: var(--color-primary);
+    --btn-primary-color: var(--color-white);
+    --btn-secondary-bg: var(--color-secondary);
+    --btn-secondary-color: var(--color-white);
+    --btn-radius: 5px;
+    --btn-font-size: 14px;
+    /* Form */
+    --form-element-bg: linear-gradient(to right, var(--color-primary), var(--color-light-blue));
+    --form-element-color: var(--color-white);
+    --form-element-border-radius: 50px;
+}
+
+
+/* Typography */
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-dark-grey);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--heading-font-weight);
+    color: var(--color-dark-blue);
+    margin-bottom: var(--space-m);
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 60px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-l);
+    border-radius: var(--btn-radius);
+    font-size: var(--btn-font-size);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn--primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-color);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-light-blue);
+}
+
+.btn--secondary {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-color);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-primary);
+}
+
+
+/* Form */
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-m);
+}
+
+form header {
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+form main {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    height: 32px;
+    border-radius: var(--form-element-border-radius);
+    width: 100%;
+    background: var(--form-element-bg);
+    color: var(--form-element-color);
+    border: 0;
+    padding-left: var(--space-xl);
+}
+
+form input::placeholder {
+    color: var(--form-element-color);
+}
+
+form main .icon i {
+    position: absolute;
+    color: var(--form-element-color);
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+form main div[class$="wrapper"] {
+    position: relative;
+    margin-bottom: var(--space-m);
+}

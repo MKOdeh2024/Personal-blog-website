@@ -1,0 +1,334 @@
+/* Reset and General Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Typography */
+
+h1 {
+    font-size: 48px;
+    line-height: 60px;
+    color: var(--color-text-heading);
+    margin-bottom: var(--space-m);
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--color-text-heading);
+    text-align: center;
+    margin-bottom: var(--space-l);
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--color-text-heading);
+    margin-bottom: var(--space-s);
+}
+
+p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: var(--space-xs);
+}
+
+
+/*  contianers */
+
+.hero-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr auto;
+    /* Define row heights */
+    grid-template-areas: "hero hero hero hero hero hero hero" "content content content content content content content";
+    background-position: center;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    background: #5e709b;
+}
+
+.hero-img {
+    background-image: url('/images/hero-image.jpg');
+    background-size: auto;
+    background-position: end;
+    /* Define grid area */
+}
+
+.hero-img-2 {
+    background-image: url('/images/hero-image-2.jpg');
+    background-size: auto;
+    background-position: end;
+    padding-left: 30px;
+    /* Define grid area */
+}
+
+
+/* Recent Posts */
+
+.recent-posts {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    /* Define row heights */
+    grid-template-areas: "recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title" "recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post";
+    grid-gap: var(--space-l);
+    max-width: 1200px;
+    margin: var(--space-xxl) auto;
+    padding: 0 var(--space-m);
+}
+
+
+/* Header and Navigation */
+
+header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-l) var(--space-m);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text-heading);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    align-items: center;
+    /* Aligns items along the cross axis */
+}
+
+.nav-links li {
+    margin-left: var(--space-l);
+}
+
+.nav-links a {
+    transition: color 0.3s ease;
+    background-color: var(--color-primary);
+    padding: var(--space-s) var(--space-m);
+    border-radius: var(--btn-radius);
+    color: var(--color-white);
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.auth-links {
+    display: flex;
+    align-items: center;
+    /* Aligns items along the cross axis */
+}
+
+.auth-links a {
+    margin-left: var(--space-m);
+}
+
+
+/* Buttons */
+
+.btn {
+    border: 0;
+}
+
+.btn--primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--color-icon-primary);
+}
+
+.btn--primary:hover {
+    background-color: var(--btn-primary-hover);
+}
+
+.btn--secondary {
+    background-color: var(--color-light-grey);
+    color: var(--color-text);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+}
+
+.btn--lg {
+    font-size: var(--btn-lg);
+}
+
+
+/* Hero Section */
+
+.hero {
+    background-image: url('/images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 var(--space-m);
+}
+
+.hero-content h1 {
+    max-width: 800px;
+    padding: 0 var(--space-m);
+    text-align: end;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: var(--space-l);
+    text-align: center;
+}
+
+
+/* Featured Posts */
+
+.featured-posts {
+    max-width: 1200px;
+    margin: var(--space-xxl) auto;
+    padding: 0 var(--space-m);
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-l);
+}
+
+.post img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--btn-radius);
+}
+
+.post-content {
+    padding: var(--space-m);
+}
+
+.recent-title {
+    grid-area: recent-title;
+    /* Assign recent posts title to the recent-title area */
+}
+
+.recent-post {
+    grid-area: recent-post;
+    /* Assign recent posts to the recent-post area */
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--space-m);
+}
+
+
+/* Responsive Styles */
+
+
+/* Media Queries */
+
+
+/* For screens smaller than 320px */
+
+@media (max-width: 320px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "header header header header" "main main main main" "recent-title recent-title recent-title recent-title" "recent-post recent-post recent-post recent-post";
+    }
+    .hero-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "hero hero hero hero" "content content content content";
+    }
+    .recent-posts {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: "recent-title recent-title recent-title recent-title" "recent-post recent-post recent-post recent-post";
+    }
+}
+
+
+/* For screens between 600px and 900px */
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "header header header header header header header header" "main main main main main main main main" "recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title" "recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post";
+    }
+    .hero-container {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "hero hero hero hero hero hero hero hero" "content content content content content content content content";
+    }
+    .recent-posts {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: "recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title" "recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post";
+    }
+}
+
+
+/* For screens wider than 900px */
+
+@media (min-width: 901px) {
+    .container {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: "header header header header header header header header header header header header" "main main main main main main main main main main main main" "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+    .hero-container {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "hero hero hero hero hero hero hero hero hero hero hero hero" "content content content content content content content content content content content content";
+    }
+    .recent-posts {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title recent-title" "recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post recent-post";
+    }
+}
